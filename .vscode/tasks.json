@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++ build active file",
+			"label": "C/C++: CPPCODE",
 			"command": "/usr/bin/g++",
 			"args": [
 				"-fdiagnostics-color=always",
@@ -13,14 +13,14 @@
 				"${fileDirname}/bin/${fileBasenameNoExtension}"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": [
 				"$gcc"
 			],
 			"group": {
+				"isDefault": true,
 				"kind": "build",
-				"isDefault": true
 			},
 			"detail": "compiler: /usr/bin/g++"
 		}
