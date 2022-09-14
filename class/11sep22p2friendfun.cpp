@@ -1,45 +1,51 @@
 #include <iostream>
 using namespace std;
 
-class ABC;
+class DEB;
 
-class XYZ
+class BINDU
 {
     int x;
 public:
-    void set_data(int a)
+    void input(void)
     {
+        int a;
+        cout << "Enter a positive integer number: ";
+        cin >> a;
         x = a;
     }
-    friend void max(XYZ, ABC);
+    friend void large(BINDU, DEB);
 };
 
-class ABC
+class DEB
 {
     int y;
 public:
-    void set_data(int a)
+    void input(void)
     {
+        int a;
+        cout << "Enter a positive integer number: ";
+        cin >> a;
         y = a;
     }
-    friend void max(XYZ, ABC);
+    friend void large(BINDU, DEB);
 };
 
-void max(XYZ t1, ABC t2)
+void large(BINDU t1, DEB t2)
 {
     if(t1.x > t2.y)
-    cout << t1.x;
+    cout << "The largest number is : " << t1.x << endl;
     else
-    cout << t2.y;
+    cout << "The largest number is : " << t2.y << endl;
 }
 
  int main()
 {
-    ABC t2;
-    XYZ t1;
-    t2.set_data(20);
-    t1.set_data(25);
-    max(t1, t2);
+    DEB t2;
+    BINDU t1;
+    t2.input();
+    t1.input();
+    large(t1, t2);
 
     return 0;
 }
